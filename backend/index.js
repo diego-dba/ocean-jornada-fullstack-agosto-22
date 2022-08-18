@@ -86,8 +86,9 @@ async function main() {
 
     res.send(item);
   });
-
-  app.listen(3000);
+    //alteração da porta para poder subir a aplicação na rede.
+    //process.env é para usar vairação no heroku
+  app.listen(process.env.PORT || 3000);
 }
 
 // Executamos a função main()
